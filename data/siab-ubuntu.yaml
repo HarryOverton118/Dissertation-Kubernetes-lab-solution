@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shell-in-a-box
+  labels:
+    app: shell-in-a-box
+spec:
+  selector:
+    matchLabels:
+      app: shell-in-a-box
+  template:
+    metadata:
+      name: shell-in-a-box
+      labels:
+        app: shell-in-a-box
+    spec:
+      containers:
+      - name: shell-in-a-box
+        image: 'sspreitzer/shellinabox:latest'
+        env:
+        - name: SIAB_PASSWORD
+          value: admin123pa55!
+
