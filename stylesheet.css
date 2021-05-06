@@ -1,0 +1,116 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
+
+div {
+	padding: 20px;
+}
+
+table {
+	padding: 20px;
+}
+
+td {
+	padding-left: 20px
+}
+
+td, th {
+	padding: 25px;
+	border: 1px solid #333;
+	
+}
+
+form {
+	padding: 20px;
+}
+
+label {
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+        font-size: 150%;
+
+}
+
+input, select {
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	border: 1px solid #ccc;
+}
+
+
+
+input[name='pause'] {
+	width: 100%;
+	border: none;
+	margin-top: 10px;
+	background-color: white;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+input[name='start'] {
+        width: 100%;
+        border: none;
+	margin-top: 10px;
+        background-color: white;
+        cursor: pointer;
+	font-weight: bold;
+        font-size: 120%;
+}
+
+input[name='remove'] {
+        width: 100%;
+        border: none;
+        margin-top: 10px;
+        background-color: white;
+        cursor: pointer;
+	font-weight: bold;
+        font-size: 120%;
+}
+
+h1 {
+	font-size: 300%;
+	color: #333;
+	text-align: center;
+}
+h2 {
+	color: #333;
+	text-align: center;
+}
+
