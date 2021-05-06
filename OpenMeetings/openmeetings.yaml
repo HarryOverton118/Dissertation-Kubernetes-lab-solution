@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openmeetings
+  labels:
+    apps: openmeetings
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: openmeetings
+  template:
+    metadata:
+      labels:
+        app: openmeetings
+    spec:
+      containers:
+        - name: openmeetings
+          image: apache/openmeetings:5.1.0
+          ports:
+          - containerPort: 5443

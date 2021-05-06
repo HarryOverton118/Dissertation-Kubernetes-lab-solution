@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pc1b
+  labels:
+    app: pc1b
+spec:
+  selector:
+    matchLabels:
+      app: pc1b
+  template:
+    metadata:
+      name: pc1b
+      labels:
+        app: pc1b
+    spec:
+      containers:
+      - name: pc1b
+        image: 'sspreitzer/shellinabox:latest'
+        env:
+        - name: SIAB_PASSWORD
+          value: pc1bpass
+        - name: SIAB_SUDO
+          value: 'true'

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: openmeetings-service
+  labels:
+    run: openmeetings-service
+spec:
+  type: NodePort
+  ports:
+  - port: 5443
+    protocol: TCP
+    nodePort: 30131
+  selector:
+    app: openmeetings

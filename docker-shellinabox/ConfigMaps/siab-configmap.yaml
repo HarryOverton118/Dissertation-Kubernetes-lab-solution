@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: siabsudo
+data:
+  SIAB_SUDO: 'true'
+

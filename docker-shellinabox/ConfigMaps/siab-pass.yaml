@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: siab-pass
+type: Opaque
+data:
+  SIAB_PASSWORD: YWRtaW4xMjNwYTU1IQo=

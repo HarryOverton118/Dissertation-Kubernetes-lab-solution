@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pc3
+  labels:
+    app: pc3
+spec:
+  selector:
+    matchLabels:
+      app: pc3
+  template:
+    metadata:
+      name: pc3
+      labels:
+        app: pc3
+    spec:
+      containers:
+      - name: pc3
+        image: 'sspreitzer/shellinabox:latest'
+        env:
+        - name: SIAB_PASSWORD
+          value: pc3pass
+        - name: SIAB_SUDO
+          value: 'true'

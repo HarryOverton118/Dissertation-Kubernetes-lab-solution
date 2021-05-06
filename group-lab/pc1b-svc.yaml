@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pc1b
+  labels:
+    app: pc1b
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 4200
+      targetPort: 4200
+  selector:
+    app: pc1b
+
