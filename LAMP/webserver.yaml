@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: php-apache
-        image: lamp_website
-        imagePullPolicy: Never
+        image: harryoverton117/lamp_website
         ports:
         - containerPort: 80
         volumeMounts:
