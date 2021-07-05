@@ -14,7 +14,7 @@ Each user gets their own kubernets namespace for their lab infrastructure so the
 group labs can be created with multiple lab deployments in a single namespace allwoing for students to work collaboratively.
 Using a suitable image of a lab environemnt with shell in a box configured, labs deployed through the student portal can also be accessed via the an emulated terminal displayed on the portal:
 
-<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/group_lab.gif?raw=true" width="100%" height="100%" class="center">
+<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/group_lab%20(2).gif?raw=true" width="100%" height="100%" class="center">
 
 
 ## Setup
