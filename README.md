@@ -16,8 +16,18 @@ Using a suitable image of a lab environemnt with shell in a box configured, labs
 
 <img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/group_lab%20(2).gif?raw=true" width="100%" height="100%" class="center">
 
-
 ## Setup
+### Deploying Objects to Kubernetes
+To set up the project on your own cluster, simply use the ***kubectl create -f file.yaml*** command to create the kubernetes objects (deployemnts, services and so on) for the LAMP stack and optionally OpenMeetings if online collaborative tools are needed. Note that the group labs configurations should be dpeloyed in their own namespace to prevent students from being able to interact with the projects main components in the default namespace. 
+
+<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/deployments.PNG?raw=true" width="100%" height="100%" class="center">
+
+### Authenticating Against the Kube API
+If the project is running locally on minikube simply use the ***kubectl proxy --port 8001 --address=example.ip.address --accept-hosts=^*** command to allow request to be made through the reverse proxy on the specified address.
+
+However, if the project is running on the cloud such as on google kubernetes engine (GKE) a service account with the appropriate permissions must be made for the apache/php deployment. Using the ca.crt file and authenticatuion token of the service account the apache/php service can create and remove kubernetes objects via the API to dynamically create lab environments.
+
+An example of including the ca.crt and auth token for the service account is commented out in the ***[api-functions.php file](https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/data/api-functions.php)***
 
 ## Recommendations
 ### GNS3 Intigration
