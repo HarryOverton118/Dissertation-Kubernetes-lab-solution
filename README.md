@@ -14,19 +14,19 @@ Each user gets their own kubernets namespace for their lab infrastructure so the
 group labs can be created with multiple lab deployments in a single namespace allwoing for students to work collaboratively.
 Using a suitable image of a lab environemnt with shell in a box configured, labs deployed through the student portal can also be accessed via the an emulated terminal displayed on the portal:
 
-<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/group_lab%20(2).gif?raw=true" width="100%" height="100%" class="center">
+<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/group_lab%20(2).gif?raw=true" width="100%" height="100%">
 
 ### Requesting Labs
 To request a lab environment studenyts can simply fill in the request form to specify the image they would like to use for the lab. Note that in the future this could include options for users to specify the CPU and Memory of their desired lab container and so on.
 
 <img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/delpoy_lab.gif?raw=true"
- width="100%" height="100%" class="center">
+ width="100%" height="100%">
 
 ## Setup
 ### Deploying Objects to Kubernetes
 To set up the project on your own cluster, simply use the ***kubectl create -f file.yaml*** command to create the kubernetes objects (deployemnts, services and so on) for the LAMP stack and optionally OpenMeetings if online collaborative tools are needed. Note that the group labs configurations should be dpeloyed in their own namespace to prevent students from being able to interact with the projects main components in the default namespace. 
 
-<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/deployments.PNG?raw=true" width="100%" height="100%" class="center">
+<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/deployments.PNG?raw=true" width="100%" height="100%">
 
 ### Authenticating Against the Kube API
 If the project is running locally on minikube simply use the ***kubectl proxy --port 8001 --address=example.ip.address --accept-hosts=^*** command to allow request to be made through the reverse proxy on the specified address.
