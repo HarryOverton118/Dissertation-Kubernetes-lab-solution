@@ -7,14 +7,20 @@ Running on a local minikube cluster (Google Kubernetes Engine was also explored 
 The apache service authenticates with the kubernetes API server through the kube proxy or alternativly using the apache servers service accounts auth token and ca.crt.
 Once authenticated the apache service can make curl requests to the kubernetes API allowing kubernetes objects to be created through the student portal.
 
-
 <img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/solution_diagram.PNG?raw=true" width="75%" height="75%">
 
+### Using Labs
 Each user gets their own kubernets namespace for their lab infrastructure so they are isolated from other students labs or other components of the solution.
 group labs can be created with multiple lab deployments in a single namespace allwoing for students to work collaboratively.
 Using a suitable image of a lab environemnt with shell in a box configured, labs deployed through the student portal can also be accessed via the an emulated terminal displayed on the portal:
 
 <img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/group_lab%20(2).gif?raw=true" width="100%" height="100%" class="center">
+
+### Requesting Labs
+To request a lab environment studenyts can simply fill in the request form to specify the image they would like to use for the lab. Note that in the future this could include options for users to specify the CPU and Memory of their desired lab container and so on.
+
+<img src="https://github.com/HarryOverton118/Dissertation-Kubernetes-lab-solution/blob/master/Screenshots/delpoy_lab.gif?raw=true"
+ width="100%" height="100%" class="center">
 
 ## Setup
 ### Deploying Objects to Kubernetes
